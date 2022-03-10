@@ -4,7 +4,7 @@ print("Aby sprawdzic poprawnosc zadania wpisz zd z numerem ktory chcesz sprawdzi
 zadanie = input()
 # Zadanie 1
 if(zadanie == "zd1"):
-  print("Odpowiedzi: ")
+  print("\nOdpowiedzi: ")
   print("0 > 1", 0 > 1)
   print("0 <= 1", 0 <= 1)
   print("0 >= 1", 0 >= 1)
@@ -14,7 +14,7 @@ if(zadanie == "zd1"):
   print("1 != 1", 1 != 1)
 # Zadanie 2
 if(zadanie == "zd2"):
-  print("Podaj liczbe x: ")
+  print("\nPodaj liczbe x: ")
   x = int(input())
   print("Podaj liczbe y: ")
   y = int(input())
@@ -24,9 +24,8 @@ if(zadanie == "zd3"):
   z = 'Ala'
   x = "ma"
   y = "kota"
-  zdanie = y + " " + x + " " + z
-  print(zdanie)
-  print(y, x, z)
+  zdanie = y + x + z
+  print(z + " " + x + " " + y)
 # Zadanie 4
 if(zadanie == "zd4"):
   print("Podaj imie i nazwisko: ")
