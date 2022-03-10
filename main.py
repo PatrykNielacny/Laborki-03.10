@@ -1,3 +1,4 @@
+import random
 print("Sa jeszcze zadania dodatkowe aby je wyswietlic wpisz dodatkowe i nr zadania np dodatkowe1\n")
 print("Aby sprawdzic poprawnosc zadania wpisz zd z numerem ktory chcesz sprawdzic np: zd1, zd2 ...")
 zadanie = input()
@@ -120,3 +121,37 @@ if(zadanie == "dodatkowe2"):
   imie = input()
   print("Podaj nazwisko: ")
   nazwisko = input()
+  print("Podaj wiek: ")
+  wiek = int(input())
+  print("Podaj swój zawód: ")
+  zawod = input()
+  print("Podaj miejsce urodzenia: ")
+  miejsce_urodzenia = input()
+  print("Podaj swoje zainteresowania: ")
+  zainteresowania = input()
+  print("\n")
+  print(imie + " " + nazwisko + " lat "+ str(wiek) + " urodzony w " + miejsce_urodzenia + " z zawodu " + zawod + " jego/jej zainteresowania to: " + zainteresowania)
+if(zadanie == "dodatkowe3"):
+  print("Nie umiem zrobic sylab do nauki nie wiem jak sie za to zabrać to zrobiłem losowanie liczby od 1-1000 i użytkownik musi ja odgadnąc taka zabawa ma 10 prób.\n")
+  liczba_prob = 0;
+  liczba = random.randint(1,1000)
+  while(liczba_prob != 10):
+    print("Podaj liczbe z zakresu 1-1000: ")
+    los = int(input())
+    if(los == liczba):
+      print("Brawo!! Zgadłes wylosowaną liczbę. Była to ", liczba)
+      break;
+    if(los < liczba):
+      print("Podana liczba jest mniejsza niż wylosowana. ")
+      liczba_prob += 1
+    if(los > liczba):
+      print("Podana liczba jest większa niż wylosowana. ")
+      liczba_prob += 1
+  print("\nNiestety nie udało ci się odgadnąć wylosowanej liczby. Wylosowana liczba to ", liczba)
+if(zadanie == "dodatkowe4"):
+  print("Podaj imie z polskimi znakami: ")
+  imie = input()
+  if(imie == "Janusz" or imie == "Grażyna"):
+    print("Witam Janusza lub Grażynę")
+  else:
+    print("Liczyłem ze poznam Janusz lub Grażynę")
