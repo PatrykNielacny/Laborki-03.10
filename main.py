@@ -1,6 +1,7 @@
 import random
+print("Aby sprawdzic poprawnosc zadania wpisz zd z numerem ktory chcesz sprawdzic np: zd1, zd2 ...\n")
 print("Sa jeszcze zadania dodatkowe aby je wyswietlic wpisz dodatkowe i nr zadania np dodatkowe1\n")
-print("Aby sprawdzic poprawnosc zadania wpisz zd z numerem ktory chcesz sprawdzic np: zd1, zd2 ...")
+print("Dodałem też zadania z listami aby je wyświetlić wpisz lista i nr od 1-4 bo tylko tyle ich było w pdf")
 zadanie = input()
 # Zadanie 1
 if(zadanie == "zd1"):
@@ -154,3 +155,30 @@ if(zadanie == "dodatkowe4"):
     print("Witam Janusza lub Grażynę")
   else:
     print("Liczyłem ze poznam Janusz lub Grażynę")
+if(zadanie == "lista1"):
+  imie_uno = ["Julia","Dawid","Bartek","Tomek","Adam","Julia","Ewelina","Dawid","Robert","Remigiusz","Tomek","Dawid","Ewelina","Antoni","Aneta","Artur","Adam","Patryk","Julian","Bogdan"]
+  print("Podaj imie osoby: ")
+  imie = input()
+  print("Podane imie jest zawarte w liscie:",imie_uno.count(imie), "razy")
+  print("Jest zawarte na indeksie o numerze",imie_uno.index(imie),"liczac numery indeksu od 0")
+  print("\nPodaj imie ktore ma zostać dołączone do listy:")
+  imie_do_dodania = input()
+  imie_uno.append(imie_do_dodania)
+  print("\nPodaj imie ktore zastąpi 3 pozycje w liscie: ")
+  imie_zastepujace = input()
+  imie_uno.insert(3,imie_zastepujace)
+  print(imie_uno)
+  print("\nSortowanie obiektów w toku :p")
+  imie_uno.sort()
+  print(imie_uno)
+  imie_duo = []
+  print("\nPodaj 3 imiona jedno po drugim ktore zostana wpisane do listy: ")
+  imie_pierwsze,imie_drugie,imie_trzecie = input(),input(),input()
+  imie_duo.append(imie_pierwsze)
+  imie_duo.append(imie_drugie)
+  imie_duo.append(imie_trzecie)
+  merge_imie = imie_uno + imie_duo
+  print("\n")
+  merge_imie.sort()
+  print(merge_imie)
+  
