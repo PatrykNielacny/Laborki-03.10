@@ -181,4 +181,3 @@ if(zadanie == "lista1"):
   print("\n")
   merge_imie.sort()
   print(merge_imie)
-  
